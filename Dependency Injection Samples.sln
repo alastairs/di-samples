@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing ASP.NET", "Compos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing WPF", "Composing WPF\Composing WPF.csproj", "{0861130C-EE8B-468A-B6F4-A4EE64DDDC5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing ASP.NET MVC", "Composing ASP.NET MVC\Composing ASP.NET MVC.csproj", "{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{0861130C-EE8B-468A-B6F4-A4EE64DDDC5F}.Release|Mixed Platforms.Build.0 = Release|x86
 		{0861130C-EE8B-468A-B6F4-A4EE64DDDC5F}.Release|x86.ActiveCfg = Release|x86
 		{0861130C-EE8B-468A-B6F4-A4EE64DDDC5F}.Release|x86.Build.0 = Release|x86
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
