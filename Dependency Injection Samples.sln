@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing WPF", "Composing 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing ASP.NET MVC", "Composing ASP.NET MVC\Composing ASP.NET MVC.csproj", "{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composing Applications", "Composing Applications", "{E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,5 +52,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51B35040-6B24-4A6D-9766-6F5C02522ADC} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
+		{0861130C-EE8B-468A-B6F4-A4EE64DDDC5F} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
 	EndGlobalSection
 EndGlobal
