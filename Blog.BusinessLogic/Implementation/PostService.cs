@@ -6,7 +6,7 @@ namespace Blog.BusinessLogic.Implementation
 {
     public class PostService : IPostService
     {
-        public void SavePost(Post post)
+        public void PublishPost(Post post)
         {
             throw new NotImplementedException();
         }
