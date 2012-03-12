@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="IPostService.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Implementation\PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
