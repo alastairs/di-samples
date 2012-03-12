@@ -6,14 +6,26 @@ namespace Blog.BusinessLogic.Implementation
 {
     public class PostService : IPostService
     {
+        private readonly IPostRepository postRepository;
+
+        public PostService(IPostRepository postRepository)
+        {
+            if (postRepository == null)
+            {
+                throw new ArgumentNullException("postRepository");
+            }
+
+            this.postRepository = postRepository;
+        }
+
         public void PublishPost(Post post)
         {
-            throw new NotImplementedException();
+            postRepository.Save(post);
         }
 
         public IEnumerable<Post> GetPosts()
         {
-            throw new NotImplementedException();
+            return postRepository.GetAllPosts();
         }
 
         public IEnumerable<Post> GetTopPosts()
