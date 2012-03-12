@@ -5,7 +5,7 @@ namespace Blog.BusinessLogic
 {
     public interface IPostService
     {
-        void Save(Post post);
+        void SavePost(Post post);
         IEnumerable<Post> GetPosts();
         IEnumerable<Post> GetTopPosts();
     }
