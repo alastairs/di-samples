@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D271BB
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing WCF", "Composing WCF\Composing WCF.csproj", "{48808DEC-DA5A-489C-9FFB-FCB5902D3329}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,13 +81,24 @@ Global
 		{2E29AEAF-A164-4101-9915-1B12DB4C7968}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2E29AEAF-A164-4101-9915-1B12DB4C7968}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2E29AEAF-A164-4101-9915-1B12DB4C7968}.Release|x86.ActiveCfg = Release|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{51B35040-6B24-4A6D-9766-6F5C02522ADC} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
-		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
 		{0861130C-EE8B-468A-B6F4-A4EE64DDDC5F} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
+		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
+		{51B35040-6B24-4A6D-9766-6F5C02522ADC} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
+		{48808DEC-DA5A-489C-9FFB-FCB5902D3329} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
 	EndGlobalSection
 EndGlobal
