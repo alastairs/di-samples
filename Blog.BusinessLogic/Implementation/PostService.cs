@@ -23,6 +23,11 @@ namespace Blog.BusinessLogic.Implementation
             postRepository.Save(post);
         }
 
+        public void PublishPostInFuture(Post post, DateTime publicationDate)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Post> GetPosts()
         {
             return postRepository.GetAllPosts();
