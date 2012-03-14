@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Blog.BusinessLogic.Implementation;
 using Blog.BusinessLogic.Models;
 
 namespace Blog.BusinessLogic
@@ -11,5 +12,6 @@ namespace Blog.BusinessLogic
         IEnumerable<Post> GetPosts();
         IEnumerable<Post> GetTopPosts();
         Post GetPostById(int postId);
+        ITagService TagService { get; set; }
     }
 }
