@@ -42,15 +42,5 @@ namespace Blog.BusinessLogic.Implementation
         {
             return postRepository.GetById(postId);
         }
-
-        /// <summary>
-        /// This is an example of Method Injection.
-        /// </summary>
-        /// <param name="post">This is not a dependency</param>
-        /// <param name="commentService">This is a dependency</param>
-        public void AddComment(Post post, ICommentService commentService)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
