@@ -7,5 +7,6 @@ namespace Blog.BusinessLogic
     {
         void Save(Post post);
         IEnumerable<Post> GetAllPosts();
+        Post GetById(int postId);
     }
 }

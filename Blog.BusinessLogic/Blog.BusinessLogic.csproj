@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\ICommentService.cs" />
     <Compile Include="IPostRepository.cs" />
     <Compile Include="IPostService.cs" />
     <Compile Include="Models\Post.cs" />
