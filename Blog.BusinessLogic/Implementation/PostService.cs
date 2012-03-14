@@ -18,6 +18,11 @@ namespace Blog.BusinessLogic.Implementation
             this.postRepository = postRepository;
         }
 
+        public ITagService TagService
+        {
+            
+        }
+
         public void PublishPost(Post post)
         {
             postRepository.Save(post);
