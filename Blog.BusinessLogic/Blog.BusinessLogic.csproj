@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\ConsoleLoggingService.cs" />
     <Compile Include="Implementation\DefaultTagService.cs" />
+    <Compile Include="ILoggingService.cs" />
+    <Compile Include="Implementation\LoggingPostService.cs" />
     <Compile Include="IRatingAlgorithm.cs" />
     <Compile Include="ITagService.cs" />
     <Compile Include="IPostRepository.cs" />
