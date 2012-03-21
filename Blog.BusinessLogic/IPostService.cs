@@ -13,5 +13,6 @@ namespace Blog.BusinessLogic
         IEnumerable<Post> GetTopPosts();
         Post GetPostById(int postId);
         ITagService TagService { get; set; }
+        void RatePost(Post post, int rating, IRatingAlgorithm ratingAlgorithm);
     }
 }

@@ -75,12 +75,18 @@ namespace Blog.BusinessLogic.Implementation
 
         public IEnumerable<Post> GetTopPosts()
         {
-            throw new NotImplementedException();
+            return postRepository.GetAllPosts().OrderByDescending(p => p.Rating);
         }
 
         public Post GetPostById(int postId)
         {
             return postRepository.GetById(postId);
+        }
+
+        public void RatePost(Post post, int rating, IRatingAlgorithm ratingAlgorithm)
+        {
+            /* The ratingAlgorithm parameter is an example of the Strategy pattern */
+            post.Rating = ratingAlgorithm.CalculateRating(post.Rating, rating);
         }
     }
 }
