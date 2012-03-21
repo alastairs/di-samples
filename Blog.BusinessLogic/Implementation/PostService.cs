@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Blog.BusinessLogic.Models;
 
 namespace Blog.BusinessLogic.Implementation
@@ -57,12 +58,19 @@ namespace Blog.BusinessLogic.Implementation
 
         public void PublishPostInFuture(Post post, DateTime publicationDate)
         {
-            throw new NotImplementedException();
+            post.PublicationDate = publicationDate;
+            postRepository.Save(post);
         }
 
         public IEnumerable<Post> GetPosts()
         {
-            return postRepository.GetAllPosts();
+            var posts = postRepository.GetAllPosts().ToList();
+            foreach (var post in posts)
+            {
+                post.Tags = TagService.GetTagsForPost(post);
+            }
+
+            return posts;
         }
 
         public IEnumerable<Post> GetTopPosts()
