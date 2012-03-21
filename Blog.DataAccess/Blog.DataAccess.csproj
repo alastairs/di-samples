@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataModels\Comments.cs" />
-    <Compile Include="DataModels\Posts.cs" />
+    <Compile Include="DataModels\PostRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
