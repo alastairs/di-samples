@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Composing_ASP.NET_MVC.Models.Post>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Blog</h2>
+@foreach (var post in Model)
+{
+    <h3>@post.Title</h3>
+    <p>@post.Summary</p>
+    <p>@post.PublicationDate</p>
+}
