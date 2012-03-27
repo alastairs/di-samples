@@ -3,11 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Blog.BusinessLogic;
 
 namespace Composing_ASP.NET_MVC.Controllers
 {
     public class PostController : Controller
     {
+        private readonly IPostService postService;
+
+        public PostController(IPostService postService)
+        {
+            if (postService == null)
+            {
+                throw new ArgumentNullException("postService");
+            }
+
+            this.postService = postService;
+        }
+
         //
         // GET: /Post/
 
