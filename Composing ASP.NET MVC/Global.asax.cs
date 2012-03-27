@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Composing_ASP.NET_MVC
@@ -24,7 +20,7 @@ namespace Composing_ASP.NET_MVC
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = "Post", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
         }
@@ -35,6 +31,9 @@ namespace Composing_ASP.NET_MVC
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            // One-line composition... Plus MyControllerFactory
+            ControllerBuilder.Current.SetControllerFactory(typeof(MyControllerFactory));
         }
     }
 }

@@ -66,10 +66,10 @@ namespace Blog.BusinessLogic.Implementation
             }
         }
 
-        public void RatePost(Post post, int rating, IRatingAlgorithm ratingAlgorithm)
+        public Rating RatePost(int postId, int rating)
         {
-            loggingService.Log("Calculating new rating for '{0}' with rating score {1} using strategy {2}", post.Title, rating, ratingAlgorithm.GetType());
-            postService.RatePost(post, rating, ratingAlgorithm);
+            loggingService.Log("Calculating new rating for post ID '{0}' with rating score {1}", postId, rating);
+            return postService.RatePost(postId, rating);
         }
     }
 }

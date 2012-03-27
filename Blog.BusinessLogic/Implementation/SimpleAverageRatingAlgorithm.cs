@@ -2,7 +2,7 @@ using Blog.BusinessLogic.Models;
 
 namespace Blog.BusinessLogic.Implementation
 {
-    class SimpleAverageRatingAlgorithm : IRatingAlgorithm
+    public class SimpleAverageRatingAlgorithm : IRatingAlgorithm
     {
         public Rating CalculateRating(Rating currentRating, int rating)
         {

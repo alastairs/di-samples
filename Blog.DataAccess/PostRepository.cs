@@ -3,9 +3,9 @@ using Blog.BusinessLogic;
 using Blog.BusinessLogic.Models;
 using Simple.Data;
 
-namespace Blog.DataAccess.DataModels
+namespace Blog.DataAccess
 {
-    class PostRepository : IPostRepository
+    public class PostRepository : IPostRepository
     {
         private readonly dynamic db = Database.OpenFile(@"Database\BlogDatabase.sdf");
 
