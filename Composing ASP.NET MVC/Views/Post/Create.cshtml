@@ -6,15 +6,4 @@
 }
 
 <h2>Create new post</h2>
-@Html.BeginForm() {
-<fieldset>
-    @Html.LabelFor(m => m.Title)
-    @Html.EditorFor(m => m.Title)
-
-    @Html.LabelFor(m => m.Summary)
-    @Html.EditorFor(m => m.Summary)
-
-    @Html.LabelFor(m => m.Body)
-    @Html.EditorFor(m => m.Body)
-</fieldset>
-}
+@{ Html.RenderPartial("PostForm", Model); }
