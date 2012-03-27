@@ -138,5 +138,15 @@ namespace Composing_ASP.NET_MVC.Controllers
                 return View();
             }
         }
+
+        [HttpPost]
+        public ActionResult RatePost(int id, int rating)
+        {
+            postService.RatePost(id, rating);
+
+            // Return the new Rating using JSON
+            var post = postService.GetPostById(id);
+            return Json(post.Rating);
+        }
     }
 }

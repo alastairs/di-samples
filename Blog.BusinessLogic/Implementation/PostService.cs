@@ -8,16 +8,23 @@ namespace Blog.BusinessLogic.Implementation
     public class PostService : IPostService
     {
         private readonly IPostRepository postRepository;
+        private readonly IRatingAlgorithm ratingAlgorithm;
         private ITagService tagService;
 
-        public PostService(IPostRepository postRepository)
+        public PostService(IPostRepository postRepository, IRatingAlgorithm ratingAlgorithm)
         {
             if (postRepository == null)
             {
                 throw new ArgumentNullException("postRepository");
             }
 
+            if (ratingAlgorithm == null)
+            {
+                throw new ArgumentNullException("ratingAlgorithm");
+            }
+
             this.postRepository = postRepository;
+            this.ratingAlgorithm = ratingAlgorithm;
         }
 
         /* This is an example of Property Injection. Note how careful we are that it has a valid value at all times. */
@@ -83,10 +90,13 @@ namespace Blog.BusinessLogic.Implementation
             return postRepository.GetById(postId);
         }
 
-        public void RatePost(Post post, int rating, IRatingAlgorithm ratingAlgorithm)
+        public Rating RatePost(int postId, int rating)
         {
-            /* The ratingAlgorithm parameter is an example of the Strategy pattern */
+            var post = GetPostById(postId);
             post.Rating = ratingAlgorithm.CalculateRating(post.Rating, rating);
+            postRepository.Save(post);
+
+            return post.Rating;
         }
     }
 }

@@ -12,11 +12,13 @@ namespace Composing_ASP.NET_MVC
     {
         private IPostRepository postRepository;
         private IPostService postService;
+        private IRatingAlgorithm ratingAlgorithm;
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
         {
             postRepository = new PostRepository();
-            postService = new PostService(postRepository);
+            ratingAlgorithm = new SimpleAverageRatingAlgorithm();
+            postService = new PostService(postRepository, ratingAlgorithm);
 
             if (controllerType == typeof(PostController))
             {
