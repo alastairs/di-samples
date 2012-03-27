@@ -95,19 +95,34 @@ namespace Composing_ASP.NET_MVC.Controllers
  
         public ActionResult Edit(int id)
         {
-            var post = postService.GetPostById(id);
-            return View(post);
+            var postEntity = postService.GetPostById(id);
+            return View(new Post
+            {
+                Id = postEntity.Id,
+                Title = postEntity.Title,
+                Summary = postEntity.Summary,
+                Body = postEntity.Body,
+                PublicationDate = postEntity.PublicationDate
+            });
         }
 
         //
         // POST: /Post/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Post post)
         {
             try
             {
-                // TODO: Add update logic here
+                var postEntity = postService.GetPostById(post.Id);
+
+                // This can be achieved more simply and consistently across an application using AutoMapper
+                postEntity.Title = post.Title;
+                postEntity.Summary = post.Summary;
+                postEntity.Body = post.Body;
+                post.PublicationDate = post.PublicationDate;
+
+                postService.PublishPost(postEntity);
  
                 return RedirectToAction("Index");
             }
@@ -115,30 +130,17 @@ namespace Composing_ASP.NET_MVC.Controllers
             {
                 return View();
             }
-        }
-
-        //
-        // GET: /Post/Delete/5
- 
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
 
         //
         // POST: /Post/Delete/5
 
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id)
         {
-            try
-            {
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            postService.DeletePost(id);
+            
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
