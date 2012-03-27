@@ -1,0 +1,20 @@
+﻿@model Composing_ASP.NET_MVC.Models.Post
+
+@{
+    ViewBag.Title = "Create new post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create new post</h2>
+@Html.BeginForm() {
+<fieldset>
+    @Html.LabelFor(m => m.Title)
+    @Html.EditorFor(m => m.Title)
+
+    @Html.LabelFor(m => m.Summary)
+    @Html.EditorFor(m => m.Summary)
+
+    @Html.LabelFor(m => m.Body)
+    @Html.EditorFor(m => m.Body)
+</fieldset>
+}
