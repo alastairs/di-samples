@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using Blog.BusinessLogic;
 using Composing_ASP.NET_MVC.Models;
@@ -25,7 +26,15 @@ namespace Composing_ASP.NET_MVC.Controllers
 
         public ActionResult Index()
         {
-            var posts = postService.GetPosts();
+            var posts = postService.GetPosts().Select(p => new Post
+            {
+                Id = p.Id,
+                Title = p.Title,
+                Summary = p.Summary,
+                Body = p.Body,
+                PublicationDate = p.PublicationDate
+            });
+
             return View(posts);
         }
 
@@ -34,8 +43,16 @@ namespace Composing_ASP.NET_MVC.Controllers
 
         public ActionResult Details(int id)
         {
-            var post = postService.GetPostById(id);
-            return View(post);
+            var postEntity = postService.GetPostById(id);
+
+            return View(new Post
+            {
+                Id = postEntity.Id,
+                Title = postEntity.Title,
+                Summary = postEntity.Summary,
+                Body = postEntity.Body,
+                PublicationDate = postEntity.PublicationDate
+            });
         }
 
         //

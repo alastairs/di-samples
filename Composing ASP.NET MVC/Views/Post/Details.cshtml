@@ -1,0 +1,11 @@
+﻿@model Composing_ASP.NET_MVC.Models.Post
+
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Title</h2>
+<p>@Model.Summary</p>
+<p>@Model.Body</p>
+<p>Posted on @Model.PublicationDate.ToString("U")</p>
