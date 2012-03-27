@@ -1,6 +1,6 @@
 ﻿using Simple.Data;
 
-namespace Blog.DataAccess.DataModels
+namespace Blog.DataAccess
 {
     class Comments
     {
