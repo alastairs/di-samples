@@ -22,6 +22,9 @@ namespace Composing_ASP.NET_MVC
             {
                 return new PostController(postService);
             }
+
+            // We can't resolve this controller type, perhaps the framework can...
+            return base.GetControllerInstance(requestContext, controllerType);
         }
     }
 }

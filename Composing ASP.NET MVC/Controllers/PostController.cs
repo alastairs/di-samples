@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Web.Mvc;
 using Blog.BusinessLogic;
+using Composing_ASP.NET_MVC.Models;
+using PostEntity=Blog.BusinessLogic.Models.Post;
 
 namespace Composing_ASP.NET_MVC.Controllers
 {
@@ -23,7 +25,8 @@ namespace Composing_ASP.NET_MVC.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var posts = postService.GetPosts();
+            return View(posts);
         }
 
         //
@@ -31,7 +34,8 @@ namespace Composing_ASP.NET_MVC.Controllers
 
         public ActionResult Details(int id)
         {
-            return View();
+            var post = postService.GetPostById(id);
+            return View(post);
         }
 
         //
@@ -46,12 +50,19 @@ namespace Composing_ASP.NET_MVC.Controllers
         // POST: /Post/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Post postViewModel)
         {
             try
             {
-                // TODO: Add insert logic here
-
+                // This can be achieved more simply and consistently across an application using AutoMapper
+                var post = new PostEntity
+                               {
+                                   Title = postViewModel.Title,
+                                   Summary = postViewModel.Summary,
+                                   Body = postViewModel.Body,
+                                   PublicationDate = postViewModel.PublicationDate
+                               };
+                postService.PublishPost(post);
                 return RedirectToAction("Index");
             }
             catch
@@ -65,7 +76,8 @@ namespace Composing_ASP.NET_MVC.Controllers
  
         public ActionResult Edit(int id)
         {
-            return View();
+            var post = postService.GetPostById(id);
+            return View(post);
         }
 
         //
@@ -102,8 +114,6 @@ namespace Composing_ASP.NET_MVC.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
- 
                 return RedirectToAction("Index");
             }
             catch
