@@ -26,6 +26,7 @@ namespace Composing_ASP.NET_MVC.Controllers
 
         public ActionResult Index()
         {
+            // This can be achieved more simply and consistently across an application using AutoMapper
             var posts = postService.GetPosts().Select(p => new Post
             {
                 Id = p.Id,
@@ -45,6 +46,7 @@ namespace Composing_ASP.NET_MVC.Controllers
         {
             var postEntity = postService.GetPostById(id);
 
+            // This can be achieved more simply and consistently across an application using AutoMapper
             return View(new Post
             {
                 Id = postEntity.Id,
