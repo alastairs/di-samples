@@ -7,7 +7,7 @@ namespace Blog.DataAccess
 {
     public class PostRepository : IPostRepository
     {
-        private readonly dynamic db = Database.OpenFile(@"Database\BlogDatabase.sdf");
+        private readonly dynamic db = Database.OpenFile(@"Database\BlogDatabase2.sdf");
 
         public void Save(Post post)
         {
