@@ -2,7 +2,7 @@ using System;
 
 namespace Composing_WPF.ViewModels
 {
-    internal interface IEditorViewModel
+    internal interface IEditorViewModel : IViewModel
     {
         string Title { get; set; }
         string Summary { get; set; }

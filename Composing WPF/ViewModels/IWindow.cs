@@ -1,6 +1,6 @@
 namespace Composing_WPF.ViewModels
 {
-    internal interface IWindow
+    public interface IWindow
     {
         void Show();
     }
