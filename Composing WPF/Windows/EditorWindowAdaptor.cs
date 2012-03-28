@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using Composing_WPF.ViewModels;
+using Composing_WPF.Views;
 
 namespace Composing_WPF.Windows
 {
@@ -8,7 +9,7 @@ namespace Composing_WPF.Windows
     {
         private readonly IViewModelFactory viewModelFactory;
         private readonly Window wpfWindow;
-        public EditorWindowAdaptor(IViewModelFactory viewModelFactory, Window wpfWindow)
+        public EditorWindowAdaptor(IViewModelFactory viewModelFactory, EditorWindow wpfWindow)
         {
             if (viewModelFactory == null)
             {

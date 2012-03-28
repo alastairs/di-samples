@@ -70,7 +70,7 @@
     <Compile Include="ViewModels\Factories\IViewModelFactory.cs" />
     <Compile Include="ViewModels\Factories\EditorViewModelFactory.cs" />
     <Compile Include="Windows\EditorWindowAdaptor.cs" />
-    <Page Include="Views\MainWindow.xaml">
+    <Page Include="Views\EditorWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -78,8 +78,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Views\EditorWindow.xaml.cs">
+      <DependentUpon>EditorWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
