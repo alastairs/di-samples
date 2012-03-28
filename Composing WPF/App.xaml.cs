@@ -36,6 +36,7 @@ namespace Composing_WPF
             kernel.Bind<IWindow>().To<EditorWindowAdaptor>();
             kernel.Bind<IPostService>().To<PostService>();
             kernel.Bind<IPostRepository>().To<PostRepository>();
+            kernel.Bind<IRatingAlgorithm>().To<SimpleAverageRatingAlgorithm>();
 
             //Auto-wiring: bind Foo to all interfaces it implements
             //kernel.Bind(x => x.FromAssembliesMatching("*").SelectAllClasses().BindAllInterfaces());
