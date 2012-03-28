@@ -14,5 +14,6 @@ namespace Blog.BusinessLogic
         Post GetPostById(int postId);
         ITagService TagService { get; set; }
         Rating RatePost(int postId, int rating);
+        void DeletePost(int id);
     }
 }

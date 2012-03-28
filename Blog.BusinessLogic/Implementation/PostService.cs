@@ -98,5 +98,10 @@ namespace Blog.BusinessLogic.Implementation
 
             return post.Rating;
         }
+
+        public void DeletePost(int id)
+        {
+            postRepository.DeleteById(id);
+        }
     }
 }
