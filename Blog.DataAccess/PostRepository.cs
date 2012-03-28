@@ -23,5 +23,10 @@ namespace Blog.DataAccess
         {
             return db.Posts.FindById(id);
         }
+
+        public void DeleteById(int postId)
+        {
+            db.Posts.DeleteById(postId);
+        }
     }
 }

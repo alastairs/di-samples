@@ -71,5 +71,11 @@ namespace Blog.BusinessLogic.Implementation
             loggingService.Log("Calculating new rating for post ID '{0}' with rating score {1}", postId, rating);
             return postService.RatePost(postId, rating);
         }
+
+        public void DeletePost(int id)
+        {
+            loggingService.Log("Deleting post with ID '{0}'", id);
+            postService.DeletePost(id);
+        }
     }
 }
