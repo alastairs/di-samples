@@ -72,6 +72,7 @@
     <Compile Include="BlogInstanceProvider.cs" />
     <Compile Include="ContractMapper.cs" />
     <Compile Include="IContractMapper.cs" />
+    <Compile Include="ServiceModels\Post.cs" />
     <Compile Include="PostService.svc.cs">
       <DependentUpon>PostService.svc</DependentUpon>
     </Compile>

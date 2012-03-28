@@ -1,5 +1,5 @@
-﻿using System.Runtime.Serialization;
-using System.ServiceModel;
+﻿using System.ServiceModel;
+using Composing_WCF.ServiceModels;
 
 namespace Composing_WCF
 {
@@ -7,34 +7,15 @@ namespace Composing_WCF
     public interface IPostService
     {
         [OperationContract]
-        string GetData(int value);
+        void CreatePost(Post post);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        Post GetPost(int postId);
 
-        // TODO: Add your service operations here
-    }
+        [OperationContract]
+        void EditPost(Post post);
 
-
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
+        [OperationContract]
+        void DeletePost(int postint);
     }
 }

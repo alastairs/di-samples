@@ -1,5 +1,6 @@
 ﻿using System;
 using Blog.BusinessLogic;
+using Composing_WCF.ServiceModels;
 
 namespace Composing_WCF
 {
@@ -25,22 +26,27 @@ namespace Composing_WCF
             this.contractMapper = contractMapper;
         }
 
-        public string GetData(int value)
+        public void CreatePost(Post post)
         {
-            return string.Format("You entered: {0}", value);
+            var postEntity = contractMapper.MapPostServiceModelToEntity(post);
+            postRepository.Save(postEntity);
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public Post GetPost(int postId)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            var post = postRepository.GetById(0);
+            return contractMapper.MapPostEntityToServiceModel(post);
+        }
+
+        public void EditPost(Post post)
+        {
+            var postEntity = contractMapper.MapPostServiceModelToEntity(post);
+            postRepository.Save(postEntity);
+        }
+
+        public void DeletePost(int postint)
+        {
+            postRepository.DeleteById(0);
         }
     }
 }
