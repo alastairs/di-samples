@@ -130,5 +130,15 @@
       <SimpleDataDependencies Include="../Blog.DataAccess/bin/$(Configuration)/Simple.Data.*.dll" />
     </ItemGroup>
     <Copy SourceFiles="@(SimpleDataDependencies)" DestinationFolder="$(OutputPath)" />
+
+    <ItemGroup>
+      <Database Include="../Blog.DataAccess/Database/BlogDatabase2.sdf"></Database>
+    </ItemGroup>
+    <PropertyGroup>
+      <DatabaseDeployLocation>$(OutputPath)Database</DatabaseDeployLocation>
+    </PropertyGroup>
+
+    <MakeDir Directories="$(DatabaseDeployLocation)" />
+    <Copy SourceFiles="@(Database)" DestinationFolder="$(DatabaseDeployLocation)" />
   </Target>
 </Project>
