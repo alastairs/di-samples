@@ -167,9 +167,18 @@
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
   </Target> -->
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <Database Include="../Blog.DataAccess/Database/BlogDatabase2.sdf"></Database>
+    </ItemGroup>
+    <PropertyGroup>
+      <DatabaseDeployLocation>$(OutputPath)Database</DatabaseDeployLocation>
+    </PropertyGroup>
+
+    <MakeDir Directories="$(DatabaseDeployLocation)" />
+    <Copy SourceFiles="@(Database)" DestinationFolder="$(DatabaseDeployLocation)" />
+  </Target>
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
     <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
   </Target>
