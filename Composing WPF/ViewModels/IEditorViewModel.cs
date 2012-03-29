@@ -8,5 +8,6 @@ namespace Composing_WPF.ViewModels
         string Summary { get; set; }
         string Body { get; set; }
         DateTime PublicationDate { get; set; }
+        void LoadPost(int i);
     }
 }

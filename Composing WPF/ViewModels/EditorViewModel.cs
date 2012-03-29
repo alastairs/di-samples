@@ -7,6 +7,8 @@ namespace Composing_WPF.ViewModels
     class EditorViewModel : IEditorViewModel, INotifyPropertyChanged
     {
         private readonly IPostService postService;
+        private readonly IWindow window;
+
         private string title;
         private string summary;
         private string body;
@@ -19,7 +21,24 @@ namespace Composing_WPF.ViewModels
                 throw new ArgumentNullException("postService");
             }
 
+            if (window == null)
+            {
+                throw new ArgumentNullException("window");
+            }
+
             this.postService = postService;
+            this.window = window;
+
+            LoadPost(1);
+        }
+
+        public void LoadPost(int i)
+        {
+            var post = postService.GetPostById(i);
+            Title = post.Title;
+            Summary = post.Summary;
+            Body = post.Body;
+            PublicationDate = post.PublicationDate;
         }
 
         public string Title
