@@ -7,7 +7,7 @@ namespace Blog.DataAccess
 {
     public class PostRepository : IPostRepository
     {
-        private readonly dynamic db = Database.OpenFile(@"Database\BlogDatabase2.sdf");
+        private readonly dynamic db = Database.OpenFile(@"S:\personal\di-samples\Composing ASP.NET MVC\bin\Database\BlogDatabase2.sdf");
 
         public void Save(Post post)
         {
@@ -16,7 +16,7 @@ namespace Blog.DataAccess
 
         public IEnumerable<Post> GetAllPosts()
         {
-            return db.All();
+            return db.Posts.All().Cast<Post>();
         }
 
         public Post GetById(int id)
