@@ -11,11 +11,14 @@ namespace Composing_ASP.NET_MVC.Models
         [Required]
         public string Title { get; set; }
         
+        [DataType(DataType.MultilineText)]
         public string Summary { get; set; }
 
+        [DataType(DataType.MultilineText)]
         [Required]
         public string Body { get; set; }
 
+        [DataType(DataType.DateTime)]
         [DisplayName("Publication Date")]
         public DateTime PublicationDate { get; set; }
     }

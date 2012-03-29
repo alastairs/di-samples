@@ -1,14 +1,26 @@
 ﻿@model Composing_ASP.NET_MVC.Models.Post
 
-@Html.BeginForm() {
+@{ Html.BeginForm(); }
 <fieldset>
-    @Html.LabelFor(m => m.Title)
-    @Html.EditorFor(m => m.Title)
+    <p>
+        @Html.LabelFor(m => m.Title)
+        @Html.EditorFor(m => m.Title)
+    </p>
 
-    @Html.LabelFor(m => m.Summary)
-    @Html.EditorFor(m => m.Summary)
+    <p>
+        @Html.LabelFor(m => m.Summary)
+        @Html.EditorFor(m => m.Summary)
+    </p>
 
-    @Html.LabelFor(m => m.Body)
-    @Html.EditorFor(m => m.Body)
+    <p>
+        @Html.LabelFor(m => m.Body)
+        @Html.EditorFor(m => m.Body)
+    </p>
+        
+    <p>
+        @Html.LabelFor(m => m.PublicationDate)
+        @Html.EditorFor(m => m.PublicationDate)
+    </p>
+
 </fieldset>
-}
+@{ Html.EndForm(); }
