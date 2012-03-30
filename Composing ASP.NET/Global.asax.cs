@@ -3,7 +3,7 @@ using System.Web;
 using Blog.BusinessLogic;
 using Blog.BusinessLogic.Implementation;
 using Blog.DataAccess;
-using Composing_ASP.NET.PresentationLogic;
+using Composing_ASP.NET_Presentation_Logic;
 using Ninject;
 
 namespace Composing_ASP.NET
@@ -14,7 +14,7 @@ namespace Composing_ASP.NET
         {
             var kernel = new StandardKernel();
 
-            kernel.Bind<PostPresenter>().ToSelf();
+            kernel.Bind<PostsPresenter>().ToSelf();
             
             kernel.Bind<IPostService>().To<PostService>();
             kernel.Bind<IPostRepository>().To<PostRepository>();

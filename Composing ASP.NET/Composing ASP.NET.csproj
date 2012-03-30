@@ -157,9 +157,9 @@
       <Project>{2E29AEAF-A164-4101-9915-1B12DB4C7968}</Project>
       <Name>Blog.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Composing ASP.NET.PresentationLogic\Composing ASP.NET.PresentationLogic.csproj">
-      <Project>{9B4185F9-C4AC-4C93-9942-C3D4E19D0AEF}</Project>
-      <Name>Composing ASP.NET.PresentationLogic</Name>
+    <ProjectReference Include="..\Composing ASP.NET Presentation Logic\Composing ASP.NET Presentation Logic.csproj">
+      <Project>{0E0EFCE1-546F-4691-9B23-D80783CA2881}</Project>
+      <Name>Composing ASP.NET Presentation Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
