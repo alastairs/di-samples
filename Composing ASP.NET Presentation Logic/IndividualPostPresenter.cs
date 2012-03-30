@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Composing_ASP.NET_Presentation_Logic
 {
-    class IndividualPostPresenter
+    public class IndividualPostPresenter
     {
     }
 }
