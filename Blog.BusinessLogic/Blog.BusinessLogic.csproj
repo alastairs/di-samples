@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DateTimeContext.cs" />
+    <Compile Include="DefaultDateTimeContext.cs" />
     <Compile Include="Implementation\ConsoleLoggingService.cs" />
     <Compile Include="Implementation\DefaultTagService.cs" />
     <Compile Include="ILoggingService.cs" />

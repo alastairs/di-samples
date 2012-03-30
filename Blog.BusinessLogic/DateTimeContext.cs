@@ -5,8 +5,13 @@ using System.Text;
 
 namespace Blog.BusinessLogic
 {
-    abstract class DateTimeContext
+    public abstract class DateTimeContext
     {
+        private static DateTimeContext current;
 
+        static DateTimeContext()
+        {
+            current = new DefaultDateTimeContext();
+        }
     }
 }
