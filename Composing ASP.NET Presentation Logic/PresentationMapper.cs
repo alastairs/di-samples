@@ -5,7 +5,7 @@ using Blog.BusinessLogic.Models;
 
 namespace Composing_ASP.NET_Presentation_Logic
 {
-    class PresentationMapper : IPresentationMapper
+    public class PresentationMapper : IPresentationMapper
     {
         public virtual IndividualPostPresenter Map(Post post)
         {
@@ -18,8 +18,6 @@ namespace Composing_ASP.NET_Presentation_Logic
             {
                 Id = post.Id,
                 Title = post.Title,
-                Summary = post.Summary,
-                Body = post.Body,
                 PublicationDate = post.PublicationDate
             };
 
@@ -42,8 +40,6 @@ namespace Composing_ASP.NET_Presentation_Logic
             {
                 Id = presenter.Id,
                 Title = presenter.Title,
-                Summary = presenter.Summary,
-                Body = presenter.Body,
                 PublicationDate = presenter.PublicationDate
             };
         }
