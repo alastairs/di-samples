@@ -2,7 +2,7 @@ using System;
 
 namespace Blog.BusinessLogic
 {
-    internal class DefaultDateTimeContext : DateTimeContext
+    public class DefaultDateTimeContext : DateTimeContext
     {
         public override DateTime Now
         {
