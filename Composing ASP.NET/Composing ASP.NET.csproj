@@ -61,7 +61,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="Post.aspx" />
+    <Content Include="Posts.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -122,12 +122,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Post.aspx.cs">
-      <DependentUpon>Post.aspx</DependentUpon>
+    <Compile Include="Posts.aspx.cs">
+      <DependentUpon>Posts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Post.aspx.designer.cs">
-      <DependentUpon>Post.aspx</DependentUpon>
+    <Compile Include="Posts.aspx.designer.cs">
+      <DependentUpon>Posts.aspx</DependentUpon>
     </Compile>
     <Compile Include="PostsDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
