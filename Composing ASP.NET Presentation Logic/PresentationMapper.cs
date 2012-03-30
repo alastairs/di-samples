@@ -14,7 +14,14 @@ namespace Composing_ASP.NET_Presentation_Logic
                 throw new ArgumentNullException("post");
             }
 
-            var presenter = new IndividualPostPresenter();
+            var presenter = new IndividualPostPresenter
+            {
+                Id = post.Id,
+                Title = post.Title,
+                Summary = post.Summary,
+                Body = post.Body,
+                PublicationDate = post.PublicationDate
+            };
 
             return presenter;
         }
@@ -33,7 +40,11 @@ namespace Composing_ASP.NET_Presentation_Logic
 
             return new Post
             {
-
+                Id = presenter.Id,
+                Title = presenter.Title,
+                Summary = presenter.Summary,
+                Body = presenter.Body,
+                PublicationDate = presenter.PublicationDate
             };
         }
     }
