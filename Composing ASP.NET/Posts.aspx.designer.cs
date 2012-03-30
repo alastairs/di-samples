@@ -22,30 +22,30 @@ namespace Composing_ASP.NET {
         protected global::System.Web.UI.WebControls.Literal PageTitle;
         
         /// <summary>
-        /// PostTitle control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal PostTitle;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Summary control.
+        /// postsGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Summary;
+        protected global::System.Web.UI.WebControls.GridView postsGridView;
         
         /// <summary>
-        /// Body control.
+        /// postsDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Body;
+        protected global::System.Web.UI.WebControls.ObjectDataSource postsDataSource;
     }
 }

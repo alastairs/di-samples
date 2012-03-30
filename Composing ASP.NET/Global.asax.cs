@@ -15,6 +15,8 @@ namespace Composing_ASP.NET
             var kernel = new StandardKernel();
 
             kernel.Bind<PostsPresenter>().ToSelf();
+
+            kernel.Bind<IPresentationMapper>().To<PresentationMapper>();
             
             kernel.Bind<IPostService>().To<PostService>();
             kernel.Bind<IPostRepository>().To<PostRepository>();
