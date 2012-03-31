@@ -16,10 +16,13 @@ namespace Composing_ASP.NET_MVC
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
         {
+            // Wire up an Ambient Context
+            DateTimeContext.Current = new DefaultDateTimeContext();
+            
             postRepository = new PostRepository();
             ratingAlgorithm = new SimpleAverageRatingAlgorithm();
             postService = new PostService(postRepository, ratingAlgorithm);
-
+            
             if (controllerType == typeof(PostController))
             {
                 return new PostController(postService);
