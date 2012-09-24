@@ -1,23 +1,23 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing ASP.NET", "Composing ASP.NET\Composing ASP.NET.csproj", "{51B35040-6B24-4A6D-9766-6F5C02522ADC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing WPF", "Composing WPF\Composing WPF.csproj", "{0861130C-EE8B-468A-B6F4-A4EE64DDDC5F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing ASP.NET MVC", "Composing ASP.NET MVC\Composing ASP.NET MVC.csproj", "{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composing Applications", "Composing Applications", "{E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.BusinessLogic", "Blog.BusinessLogic\Blog.BusinessLogic.csproj", "{C0AE479C-408B-4E58-960E-E29131C960A6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.DataAccess", "Blog.DataAccess\Blog.DataAccess.csproj", "{2E29AEAF-A164-4101-9915-1B12DB4C7968}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D271BBBA-6FFF-4AA7-8CFE-EE4656F16413}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing ASP.NET", "Composing ASP.NET\Composing ASP.NET.csproj", "{51B35040-6B24-4A6D-9766-6F5C02522ADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing WPF", "Composing WPF\Composing WPF.csproj", "{0861130C-EE8B-468A-B6F4-A4EE64DDDC5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing ASP.NET MVC", "Composing ASP.NET MVC\Composing ASP.NET MVC.csproj", "{6A096411-D7EE-4A94-8E58-14DDBC55ADB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.BusinessLogic", "Blog.BusinessLogic\Blog.BusinessLogic.csproj", "{C0AE479C-408B-4E58-960E-E29131C960A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.DataAccess", "Blog.DataAccess\Blog.DataAccess.csproj", "{2E29AEAF-A164-4101-9915-1B12DB4C7968}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composing WCF", "Composing WCF\Composing WCF.csproj", "{48808DEC-DA5A-489C-9FFB-FCB5902D3329}"
 EndProject
@@ -120,9 +120,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{51B35040-6B24-4A6D-9766-6F5C02522ADC} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
 		{0861130C-EE8B-468A-B6F4-A4EE64DDDC5F} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
 		{6A096411-D7EE-4A94-8E58-14DDBC55ADB0} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
-		{51B35040-6B24-4A6D-9766-6F5C02522ADC} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
 		{48808DEC-DA5A-489C-9FFB-FCB5902D3329} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
 		{0E0EFCE1-546F-4691-9B23-D80783CA2881} = {E4BB50EA-D1E9-46DD-B286-96AADACBBCCD}
 	EndGlobalSection
